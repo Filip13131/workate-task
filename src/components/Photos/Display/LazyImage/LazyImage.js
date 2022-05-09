@@ -10,7 +10,7 @@ const LazyImage = ({src, key, alt }) => (
         alt={alt}
         key={key}
         src={src}
-        placeholder={<BarWave/>} // use normal <img> attributes as props
+        placeholder={<BarWave/>} 
         />
     </div>
   );

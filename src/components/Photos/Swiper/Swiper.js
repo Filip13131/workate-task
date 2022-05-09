@@ -14,11 +14,11 @@ const Swiper = ({pageCounter, setPageCounter, numberOfPages})=>{
             <button onClick={()=> decreesePageCount()}
                     disabled={pageCounter===0 ? true : false}>
                 Previous
-                </button>
+            </button>
             <button onClick={()=> increesePageCount()}
                     disabled={pageCounter===numberOfPages-1 ? true : false}>
                 Next
-                </button>
+            </button>
         </div>
     )
 }

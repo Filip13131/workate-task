@@ -37,7 +37,7 @@ const Photos = () => {
             .get(url)
             .then( (res) => {
                 setOurPhotos(getSlugsFromJSONs(res.data))
-            } )
+            })
             .catch((err) => {
                 console.error(err);
             });

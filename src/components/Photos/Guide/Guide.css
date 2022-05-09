@@ -3,9 +3,5 @@
     display: grid;
     grid-template-columns: 1fr 0.25fr;
     grid-column-gap: 10px;
-    
 }
 
-.ProgressBar{
-    vertical-align: middle;
-}
