@@ -1,6 +1,7 @@
 import './Photos.css';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Swiper from "./Swiper/Swiper.js"
 
 const getSlugsFromJSONs = (photos) => {
     let dataWithSlugs = photos.map((photo)=>{
@@ -46,20 +47,19 @@ const Photos = () => {
     console.log(ourPhotos)
     
     return(
-    
-            <div 
-                className = "Photos" 
-                style= {{ gridTemplateColumns: 'repeat(3, 1fr)'}}
-                                                                        >  
+        <div className='Workspace'>
+            <div></div>
+            <div className = "Photos">  
                     {
-                        ourPhotos.slice(pageCounter*numberOfPhotosDisplayedCounter,Math.min((pageCounter+1)*numberOfPhotosDisplayedCounter,ourPhotos.length-1)).map((ourPhoto)=>(
-                            <img key= {ourPhoto.id} 
+                        ourPhotos.slice(pageCounter*numberOfPhotosDisplayedCounter,(pageCounter+1)*numberOfPhotosDisplayedCounter).map((ourPhoto)=>(
+                            <img key= {ourPhoto.id} className='Photo'
                             src= {"http://source.unsplash.com/"+ourPhoto.slug} alt="alternatetext"/>
                         )
                         )
                     }
             </div>
-
+            <Swiper pageCounter={pageCounter} setPageCounter={setPageCounter} />
+        </div>
     );
 }
 
