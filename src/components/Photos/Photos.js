@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Swiper from "./Swiper/Swiper.js"
 import Guide from "./Guide/Guide.js"
+import Display from './Display/Display';
 
 const getSlugsFromJSONs = (photos) => {
     let dataWithSlugs = photos.map((photo)=>{
@@ -53,15 +54,7 @@ const Photos = () => {
     return(
         <div className='Workspace'>
             <Guide pageCounter={pageCounter} numberOfPages={numberOfPages}/>
-            <div className = "Photos">  
-                    {
-                        ourPhotos.slice(pageCounter*numberOfPhotosDisplayedCounter,(pageCounter+1)*numberOfPhotosDisplayedCounter).map((ourPhoto)=>(
-                            <img key= {ourPhoto.id} className='Photo'
-                            src= {"http://source.unsplash.com/"+ourPhoto.slug} alt="loadingError"/>
-                        )
-                        )
-                    }
-            </div>
+            <Display pageCounter={pageCounter} numberOfPhotosDisplayedCounter={numberOfPhotosDisplayedCounter} ourPhotos={ourPhotos}/>
             <Swiper pageCounter={pageCounter} setPageCounter={setPageCounter} numberOfPages={numberOfPages}/>
         </div>
     );

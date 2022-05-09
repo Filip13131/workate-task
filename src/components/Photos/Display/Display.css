@@ -1,0 +1,10 @@
+.Photos {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1vw;
+    min-height: 0;  
+    min-width: 0; 
+    
+}
+
