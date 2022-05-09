@@ -6,7 +6,7 @@ const Guide = ({pageCounter, numberOfPages}) => {
     return (
         <div className="Guide">
             <ProgressBar striped variant="success" active='true' now={(pageCounter+1)*100/numberOfPages} />
-            <div>S</div>       
+            <div><b>{pageCounter+1}/{numberOfPages}</b></div>       
         </div>
     )
 }
