@@ -2,24 +2,31 @@
     position: static;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 1vw;
+    min-height: 0;  
+    min-width: 0; 
     
 }
 
 .Photo {
-    object-fit: cover;
+    position: static;
+    min-width: 0;
+    min-height: 0;
     width: 100%;
     max-height: 100%;
-
+    overflow: hidden;
+    
     
 }
 
 .Workspace{
-    position: fixed;
+    position: static;
     display:grid;
-    grid-template-rows: repeat(3, 1fr);
-    width: 75vw;
-    right: 12.5vw;
-    height: 100vh;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    min-height: 0;  
+    min-width: 0; 
     
 }
