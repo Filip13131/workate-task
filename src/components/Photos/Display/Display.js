@@ -13,7 +13,7 @@ const Display = ({pageCounter, numberOfPhotosDisplayedCounter, ourPhotos}) => {
     return(
         <div className = "Photos">  
             {
-                 sliced.map((ourPhoto)=>(
+                 sliced().map((ourPhoto)=>(
                         <LazyImage key= {ourPhoto.id} 
                                     src= {"http://source.unsplash.com/"+ourPhoto.slug} 
                                     alt={"error"} 
