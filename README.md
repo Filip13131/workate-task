@@ -25,7 +25,4 @@ To Start Server:
 To Visit App:
 
 `localhost:3000/ideas`  
-
-## Reflection
-
   
