@@ -15,8 +15,7 @@ const getSlugsFromJSONs = (photos) => {
             if (letter === '/'){
                 slug=''
             }
-        }
-        )
+        })
         photo.slug= slug
         return photo;
     })
